@@ -1,0 +1,116 @@
+/* artikel.css */
+
+/* Reset default margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Berita Terbaru */
+.container {
+    margin-top: 30px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* About Section */
+.about-section-padding {
+    padding: 60px 0;
+}
+
+.about-section-padding h2 {
+    margin-bottom: 20px;
+}
+
+.about-section-padding .img-fluid {
+    border-radius: 8px;
+}
+
+/* Button */
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+/* Carousel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000; /* Warna latar belakang untuk kontrol carousel */
+    border-radius: 50%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero img {
+        max-height: 250px; /* Mengurangi tinggi gambar hero pada layar kecil */
+    }
+
+    .about-section-padding {
+        padding: 30px 0; /* Mengurangi padding untuk section about pada layar kecil */
+    }
+
+    .about-section-padding .img-fluid {
+        max-width: 100%; /* Memastikan gambar tidak melampaui lebar kontainer */
+        height: auto; /* Memastikan tinggi gambar otomatis */
+    }
+
+    .card {
+        margin-bottom: 15px; /* Mengurangi margin bawah untuk kartu berita */
+    }
+}
+
+@media (max-width: 576px) {
+    .overlay h1 {
+        font-size: 1.5rem; /* Mengurangi ukuran font judul hero */
+    }
+
+    .overlay p {
+        font-size: 0.9rem; /* Mengurangi ukuran font deskripsi hero */
+    }
+}

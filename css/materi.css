@@ -1,0 +1,140 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #f1fbff;
+  color: #333;
+  padding-top: 70px;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  display: block;
+}
+
+.me-3 {
+  margin-right: 20px;
+}
+
+h1 {
+  font-size: 36px; 
+  font-family: 'Montserrat', sans-serif; 
+  color: #000; 
+  text-align: center; 
+  font-weight: bold; 
+  margin-bottom: 20px; 
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: justify; 
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-warning {
+  background-color: #FFC107; 
+  color: #fff;
+}
+
+.btn-warning:hover {
+  background-color: #FFA000; 
+}
+
+.navbar-nav a{
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.navbar-light .navbar-brand {
+  color:black;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover {
+  color: black;
+}
+.navbar-light .navbar-nav .navbar-link {
+  color: black;
+}
+.w-100 {
+  height: 100hv;
+}
+
+
+@media (max-width: 768px) {
+  .d-flex {
+      flex-direction: column; 
+      text-align: center;
+  }
+
+  .me-3 {
+      margin-right: 0;
+      margin-bottom: 20px; 
+  }
+  
+  .navbar-nav {
+    text-align: center;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.d-flex {
+  display: flex;
+  align-items: flex-start; 
+  gap: 20px; 
+}
+.img-fluid {
+  max-width: 72%; 
+  height: auto; 
+}
+.content {
+  flex: 1; 
+}

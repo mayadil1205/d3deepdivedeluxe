@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-image: url('images/header-bg.jpg'); /* Ganti dengan gambar header yang sesuai */
+    background-size: cover;
+    background-position: center;
+}
+
+section {
+    padding: 60px 0;
+}
+
+footer {
+    background-color: #f8f9fa;
+}

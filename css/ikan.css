@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h2, h3 {
+    color: #2c3e50; /* Warna biru untuk judul */
+}
+
+.container {
+    margin-top: 0px; /* Jarak dari navbar */
+}
+
+ul {
+    list-style-type: none; /* Menghilangkan bullet pada list */
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px; /* Jarak antar item list */
+}
+
+a {
+    color: #007BFF; /* Warna tautan */
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+}
+
+a:hover {
+    text-decoration: underline; /* Menambahkan garis bawah saat hover */
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem; /* Ukuran font h2 lebih kecil pada layar kecil */
+    }
+
+    h3 {
+        font-size: 1.25rem; /* Ukuran font h3 lebih kecil pada layar kecil */
+    }
+
+    .container {
+        margin-top: 80px; /* Mengurangi jarak pada layar kecil */
+    }
+}

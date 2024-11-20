@@ -1,0 +1,64 @@
+body {
+    background-color: #f8f9fa;
+}
+
+h1 {
+    margin-top: 20px;
+    color: #343a40;
+}
+
+.region {
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.region h2 {
+    color: #007bff;
+}
+
+.region p {
+    color: #343a40;
+    justify-content: center;
+}
+
+.region img {
+    max-width: 80%; /* Memperkecil ukuran gambar */
+    height: auto; /* Memastikan tinggi gambar proporsional */
+    margin-bottom: 15px; /* Memberikan jarak antara gambar dan teks */
+}
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px; /* Mengubah ukuran font untuk layar kecil */
+    }
+
+    .region {
+        padding: 15px; /* Mengurangi padding pada region */
+    }
+
+    .region img {
+        max-width: 100%; /* Membuat gambar lebih besar pada layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px; /* Ukuran font lebih kecil untuk layar sangat kecil */
+    }
+
+    .region {
+        padding: 10px; /* Mengurangi padding lebih lanjut untuk layar kecil */
+    }
+
+    .region h2 {
+        font-size: 18px; /* Mengubah ukuran font untuk judul di region */
+    }
+
+    .region p {
+        font-size: 14px; /* Mengubah ukuran font untuk paragraf */
+    }
+}

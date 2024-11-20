@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" media="screen" tittle="no title">
+  <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+  <title>Login Page</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1>LOGIN</h1>
+    <form action="login.php" method="POST">
+      <div class="placeholder">
+        <i class="fas fa-envelope-open-text"></i>
+        <input type="text" name="email" placeholder="Email"
+        required>
+      </div>
+      <div class="box-input">
+        <i class="fas fa-lock"></i>
+        <input type="password" name="password" placeholder="Password"
+        required>
+      </div>
+
+      <div class="remember-forgot">
+        <label><input type="checkbox"> Ingat saya</label>
+        <a href="#">Lupa kata sandi?</a>
+      </div>
+
+      <a href="dashboard.php">
+        <button type="submit" name="login" class="btn-input">Login</button>
+      </a>
+      <div class="register-link">
+        <p>Belum punya akun?
+          <a href="register.html">Register disini</a>
+        </p>
+      </div>  
+    </form>
+  </div>
+</body>
+
+</html>
+

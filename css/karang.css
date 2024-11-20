@@ -1,0 +1,75 @@
+/* karang.css */
+
+/* Reset margin dan padding untuk semua elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Warna latar belakang */
+}
+
+/* Container styling */
+.container {
+    margin-top: 0px; /* Memberikan jarak dari navbar */
+    padding: 20px;
+}
+
+/* Heading styles */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #343a40; /* Warna teks */
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #007bff; /* Warna teks */
+}
+
+/* Paragraph styles */
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Link styles */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* List styles */
+ul {
+    list-style-type: none; /* Menghilangkan bullet */
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Mengurangi ukuran font di perangkat kecil */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Mengurangi ukuran font di perangkat kecil */
+    }
+
+    .container {
+        padding: 10px; /* Mengurangi padding di perangkat kecil */
+    }
+}

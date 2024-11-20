@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebGIS</title>
+        <h1><center>PERSEBARAN TERUMBU KARANG, IKAN KARANG DAN PARIWISATA INDONESIA TIMUR</center><h1></h1>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <style type ="text/css">
+        #map { height: 500px; }
+     </style>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+</head>
+    <body>
+    <div id="map"></div>
+
+    </body>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+
+    <div id='map'></div>
+
+    <script type="text/javascript" src="peta.js"></script>
+<script type="text/javascript">
+    var geojsonLayer = L.geoJSON(geojsonData, {
+        onEachFeature: function (feature, layer) {
+            if (feature.properties && feature.properties.name) {
+                layer.bindPopup(`<b>${feature.properties.name}</b>`);
+            }
+        },
+        style: function (feature) {
+            return { color: "#ff7800", weight: 2 };
+        }
+    }).addTo(map);
+</script>
+
+    <!-- <script type="text/javascript" src="peta.js"></script> -->
+ 
+<Script>
+        var map = L.map('map').setView([-4.8302383, 125.0019455], 5);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+
+var marker = L.marker([-3.6237029, 128.2894001]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b>Pantai Sopapei</b><br>
+    Suli Bawah, Kec. Salahutu, Kabupaten Maluku Tengah, Maluku<br>
+    <img src="https://lh5.googleusercontent.com/p/AF1QipOwHMkBWRy2QunlkOO8X1mblSpaj5vE3FKY40h9=w408-h306-k-no" alt="Pantai Sopapei" style="width: 75%; height: auto; margin-top: 5px;">
+    </div>
+`);
+var marker = L.marker([-3.7705311, 128.1498528]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b>Pantai Pintu Kota </b>
+    <br>Dusun Airlouw, Kecamatan Nusaniwe, Ambon, Provinsi Maluku.<br>
+    <img src="https://assets-a1.kompasiana.com/items/album/2017/12/08/pantai-pintu-kota-2-5a2a58baf13344039c5632f2.jpg" alt="Pantai Pintu Kota " style="width: 75%; height: auto; margin-top: 5px;">
+    </div>
+`);
+var marker = L.marker([-3.1668028, 127.0200713]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b>Pantai Jikumerasa </b>
+    <br>Desa Jikumerasa, Kecamatan Lilialy, Kabupaten Buru, Maluku <br>
+    <img src="https://liburanyuk.co.id/wp-content/uploads/2022/04/@rinaldy.aditya-819x1024.jpg" alt="Pantai Jikumerasa" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+var marker = L.marker([-3.7381453, 128.2382107]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b>Pantai Hukurila </b>
+    <br>Banda Sea, Kota Ambon, Maluku, Indonesia<br>
+    <img src="https://www.garispantai.com/wp-content/uploads/2022/05/pantai-hukurila.jpg" alt="Pantai Jikumerasa" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+var marker = L.marker([-2.959873, 129.1289063]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b>Pantai Ora </b>
+    <br>Jl. Kabupaten, Kec. Seram Utara, Kabupaten Maluku Tengah, Maluku<br>
+    <img src="https://lh5.googleusercontent.com/p/AF1QipPh5OVDU4V2V3I-ajP1GElKSW73qNos9XkUb-0M=w408-h306-k-no" alt="Pantai Jikumerasa" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+var marker = L.marker([-3.7639226, 128.1002036]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b>Pantai Santai </b>
+    <br>Jl. Amanhuse, Seilale, Kec. Nusaniwe, Kota Ambon, Maluku<br>
+    <img src="https://www.pantainesia.com/wp-content/uploads/2018/08/pantai-santai-680x382.jpg" alt="Pantai Jikumerasa" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+var marker = L.marker([-3.6215027,128.2531934]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b>Pantai Natsepa </b>
+    <br>Suli, Kec. Salahutu, Kabupaten Maluku Tengah, Maluku<br>
+    <img src="https://indonesiakaya.com/wp-content/uploads/2020/10/Salah_satu_sudut_tempat_menikmati_keindahan_Pantai_Natsepa-1.jpg" alt="Pantai Jikumerasa" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+var marker = L.marker([-3.7806779,128.1154608]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b>Pantai Namatalu </b>
+    <br>Jl. Amanhuse, Latuhalat, Kota Ambon, Maluku<br>
+    <img src="https://dbijapkm3o6fj.cloudfront.net/resources/9050,1004,1,1,4,0,600,450/-4601-/20160916221216/pantai-namalatu.jpeg" alt="Pantai Jikumerasa" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+var marker = L.marker([-5.6624927,132.631374]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b>Pantai Ngurbloat </b>
+    <br>Ngurbloat, Kabupaten Maluku Tenggara, Maluku<br>
+    <img src="https://asset.kompas.com/crops/bddd7lrHNOb1nYSt4STudJrpKJA=/0x91:1280x944/750x500/data/photo/2021/10/29/617ba13c50be6.jpg" alt="Pantai Jikumerasa" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-5.803816,132.5866655]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b>Pantai Ngurtavur </b>
+    <br>Kabupaten Maluku Tenggara, Maluku<br>
+    <img src="https://pantainesia.com/wp-content/uploads/2021/10/Pantai-Ngurtavur-Maluku-Tenggara.jpg" alt="Pantai Jikumerasa" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+var marker = L.marker([-3.7743836,127.9331822]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b>Pantai Huluwa Wakasihu </b>
+    <br> Wakasihu, Kec. Leihitu Bar., Kabupaten Maluku Tengah, Maluku<br>
+    <img src="https://atourin.obs.ap-southeast-3.myhuaweicloud.com/images/destination/maluku-tengah/pantai-huluwa-profile1646400208.png?x-image-process=image/resize,p_100,limit_1/imageslim" alt="Pantai Huluwa Wakasihu" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+
+
+var marker = L.marker([-3.5049049,128.3325041]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b>Pantai Liang </b>
+    <br> Jalan Propinsi, Liang, Salahutu, Kabupaten Maluku Tengah, Maluku<br>
+    <img src="https://www.garispantai.com/wp-content/uploads/2020/06/pantai-liang.jpg" alt="Pantai Liang" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-3.0672437,130.4612081]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b>Pantai Gumumae </b>
+    <br> Jl. Wailola, Bula, Kec. Bula, Kabupaten Seram Bagian Timur, Maluku<br>
+    <img src="https://tse1.mm.bing.net/th?id=OIP.hptlOyfXAI6IjAEfL0g0FgHaEc&pid=Api&P=0&h=220" alt="Pantai Liang" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-2.4214791,140.3568169]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b>Pantai Herlem </b>
+    <br> Tablasupa, Distrik Depapre, Kabupaten Jayapura, Papua 99353<br>
+    <img src="https://s3.ap-southeast-1.amazonaws.com/cdn.orbit/wp-content/uploads/2022/03/07080051/mengunjungi-pantai-harlem-wisata-papua-yang-indah-nan-mengagumkan-1200x900-1.jpg" alt="Pantai Liang" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-2.4624453, 140.3437349]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Tablanusu </b>
+    <br> Waiya, Depapre, Entiyebo, Distrik Depapre, Kabupaten Jayapura, Papua 99353<br>
+    <img src="https://minews.id/wp-content/uploads/2021/12/Pantai-Tablanusu-2-2048x1365.jpg" alt="Pantai Liang" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-2.4339533, 140.3738591]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Amai </b>
+    <br> Tablasupa, Distrik Depapre, Kabupaten Jayapura, Papua 99353<br>
+    <img src="https://ksmtour.com/media/images/articles8/pantai-amai-jayapura-papua.jpg" alt="Pantai Amai" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-0.8706471,134.1070065]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Yen Beba Manokwari </b>
+    <br> Pasir Putih, Kec. Manokwari Tim., Kabupaten Manokwari, Papua Bar.<br>
+    <img src="https://www.gotravelly.com/blog/wp-content/uploads/2021/01/Pantai-Yen-Beba.jpg" alt="Pantai Yen Beba" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+var marker = L.marker([-1.1708322, 136.2189221]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Bosnik, Biak Numfor </b>
+    <br> Woniki, Kec. Biak Tim., Kabupaten Biak Numfor, Papua 98152.<br>
+    <img src="https://t-2.tstatic.net/papua/foto/bank/images/Sunset-di-Pantai-Bosnik-Biak.jpg" alt="Pantai Yen Beba" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-0.8234159,136.000807]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Batu Picah Biak Numpor </b>
+    <br> Yawosi/Fanindi, Distrik Yawosi, Kabupaten Biak Numfor, Papua<br>
+    <img src="https://indonesiatraveler.id/wp-content/uploads/2021/01/Biak-Pantai-Batu-Picah-Photo-by-@hitspapuadotId.png" alt="Pantai Yen Beba" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-0.501623,130.53453]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Timbul Raja Ampat </b>
+    <br> Yawosi/Fanindi, Distrik Yawosi, Kabupaten Biak Numfor, Papua<br>
+    <img src="https://bisniswisata.co.id/wp-content/uploads/2019/06/PasirTimbul.jpg" alt="Pantai Yen Beba" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-2.5159083,140.1860189]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Hamadi Jayapura </b>
+    <br> Tobati, Distrik Jayapura Selatan, Kota Jayapura, Papua<br>
+    <img src="http://pewartasatu.com/wp-content/uploads/2022/03/hamadi.jpg" alt="Pantai Yen Beba" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+var marker = L.marker([-2.5547926,140.7180069]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Yacoba</b>
+    <br> TArgapura, Distrik Jayapura Selatan, Kota Jayapura, Papua<br>
+    <img src="https://cdn.idntimes.com/content-images/community/2021/12/adjie-darma-bv6iwnthe31-899b59f0f65acad798d392c407f4ab92-ba4ff218238ffe0baf2ad0c66a4b14c9.jpg" alt="Pantai Yen Beba" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+var marker = L.marker([0.8628642,127.3175289]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Jikomalamo</b>
+    <br> V879+6X9, Jl. Syaikh Muhammad Al-Khidhir, Sulamadaha, Kec. Pulau Ternate, Kota Ternate, Maluku Utara<br>
+    <img src="https://cdn.idntimes.com/content-images/community/2022/09/299361169-798889051473047-8332554233040048179-n2-41de55f2c34bd9d1bd2b234d79dab910-1d5abbfb7840a0baaa7241dd5b45afcc_600x400.jpg" alt="Pantai Yen Beba" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+var marker = L.marker([0.8625899,127.3351447]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Sulamadaha</b>
+    <br> Sulamadaha, Kec. Pulau Ternate, Kota Ternate, Maluku Utara<br>
+    <img src="https://pariwisataindonesia.id/wp-content/uploads/2020/05/Pantai-Sulamadaha.jpg" alt="Pantai Yen Beba" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+var marker = L.marker([1.7439186,127.8832623]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Pulau Kakara </b>
+    <br> Utara Pulau Kakara, Gamsungi, Kec. Tobelo, Kabupaten Halmahera Utara, Maluku Utara <br>
+    <img src="https://i.ytimg.com/vi/WuMjDNfrRc4/maxresdefault.jpg" alt="Pantai Pulau Kakara" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+
+var marker = L.marker([0.7659029,127.3000718]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Kastela </b>
+    <br> Utara Pulau Kakara, Gamsungi, Kec. Tobelo, Kabupaten Halmahera Utara, Maluku Utara <br>
+    <img src="https://cdn.idntimes.com/content-images/community/2022/05/1653280910821-899b59f0f65acad798d392c407f4ab92-abf2908b9773ada41cee3af83bbfb501.jpg" alt="Pantai Pulau Kakara" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+
+var marker = L.marker([1.685985,127.8657435]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Karlen </b>
+    <br> Pitu, Kec. Tobelo Tengah, Kabupaten Halmahera Utara, Maluku Utara <br>
+    <img src="https://www.nativeindonesia.com/foto/2023/05/wisata-pantai-sowan.jpg" alt="Pantai Pulau Kakara" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+
+var marker = L.marker([0.7784486,127.3817438]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Kotabaru </b>
+    <br> Kota Baru, Kec. Ternate Tengah, Kota Ternate, Maluku Utara <br>
+    <img src="https://img.okezone.com/content/2023/06/02/408/2824143/ini-3-pantai-unggulan-maluku-yang-jadi-magnet-buat-wisatawan-asean-ztEIpBLH4g.jpg" alt="Pantai Pulau Kakara" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+
+var marker = L.marker([1.6569394,127.1634577]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Kapa-kapa </b>
+    <br> 5W5F+GG2, Kapa Kapa, Kec. Loloda Utara, Kabupaten Halmahera Utara, Maluku Utara <br>
+    <img src="https://img.kliknusae.com/uploads/2019/05/Kapal-Batu.jpg" alt="Pantai Pulau Kakara" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+
+var marker = L.marker([2.1568319,127.9212202]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Kapa-kapa </b>
+    <br> 5W5F+GG2, Kapa Kapa, Kec. Loloda Utara, Kabupaten Halmahera Utara, Maluku Utara <br>
+    <img src="https://img.kliknusae.com/uploads/2019/05/Kapal-Batu.jpg" alt="Pantai Pulau Kakara" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+
+var marker = L.marker([1.0437058,127.4624915]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Tuada </b>
+    <br> Tuada, Kec. Jailolo, Kabupaten Halmahera Barat, Maluku Utara<br>
+    <img src="https://loka-pedia.com/storage/2023/10/AF1QipOyoz2OUZQ5xpy1jWIfl9TDh873Mi2QIPfCj_xjw800-h600-k-no.jpeg" alt="Pantai Pulau Kakara" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+
+var marker = L.marker([1.0541,127.5052954]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Air Terjun Bukumatiti </b>
+    <br>3HR7+7JH, Bukumatiti, Kec. Jailolo, Kabupaten Halmahera Barat, Maluku Utara <br>
+    <img src="https://i1.wp.com/www.syakirurohman.net/wp-content/uploads/2015/10/air-terjun-2-warna.jpg?fit=1024%2C768&ssl=1" alt="Pantai Pulau Kakara" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+
+var marker = L.marker([1.0541,127.5052954]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Air Terjun Bukumatiti </b>
+    <br>3HR7+7JH, Bukumatiti, Kec. Jailolo, Kabupaten Halmahera Barat, Maluku Utara <br>
+    <img src="https://i1.wp.com/www.syakirurohman.net/wp-content/uploads/2015/10/air-terjun-2-warna.jpg?fit=1024%2C768&ssl=1" alt="Pantai Pulau Kakara" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+
+var marker = L.marker([1.0208162,127.2656809]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Air panas Akesahu </b>
+    <br>Gamsungi, Kec. Kao Tlk., Kabupaten Halmahera Utara, Maluku Utara <br>
+    <img src="https://cdn.idntimes.com/content-images/community/2022/07/15253155-1634616026835405-5310280685552926720-n-899b59f0f65acad798d392c407f4ab92-157bbf66439c3a8a651e7972cf3ccfeb.jpg" alt="Pantai Pulau Kakara" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+var marker = L.marker([1.1515986, 127.6900278]).addTo(map);
+
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Ngofagita </b>
+    <br>Ngofagita, Kec. Malifut, Kabupaten Halmahera Utara, Maluku Utara <br>
+    <img src="https://blog-static.mamikos.com/wp-content/uploads/2023/05/Nama-Nama-Pantai-dan-Laut-di-Pulau-Papua-dan-Maluku-Lengkap.jpg" alt="Pantai Pulau Kakara" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+
+var marker = L.marker([1.1554925,127.4565725]).addTo(map);
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Wisata Hatetabako  </b>
+    <br>Hatetabako, Kec. Wasile Tengah, Kabupaten Halmahera Timur, Maluku Utara<br>
+    <img src="https://blog-static.mamikos.com/wp-content/uploads/2023/05/Nama-Nama-Pantai-dan-Laut-di-Pulau-Papua-dan-Maluku-Lengkap.jpg" alt="Pantai Pulau Kakara" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+var marker = L.marker([-3.8238337,129.1147614]).addTo(map);
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Teluk Triton Kaimana  </b>
+    <br>5XGV+H4Q, Saria, Kec. Kaimana, Kabupaten Kaimana, Papua Bar. 98654<br>
+    <img src="https://cdn.luxuo.com/2019/04/2.KAIMANA_underwater.jpg" alt="Pantai Pulau Kakara" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+var marker = L.marker([-3.0342405,132.1030426]).addTo(map);
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Talud Nusi Baru </b>
+    <br>RMJ2+WFM, Unnamed Road, Nifasi, Makimi, Kabupaten Nabire, Papua 98818<br>
+    <img src="https://1.bp.blogspot.com/-kujIaFnUzBM/WfBG-HWuATI/AAAAAAAAGRk/sQqQ10oSukQ4qXkFh8oGTYdWmhAcwJPtgCLcBGAs/s1600/thetranstravel-Nusi.png" alt="Pantai Pulau Kakara" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+var marker = L.marker([-2.353845,132.5424957]).addTo(map);
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Sarawandori </b>
+    <br>Sarawandori, Kabupaten Kepulauan Yapen, Papua 98215<br>
+    <img src="https://seringjalan.com/wp-content/uploads/2020/04/Pantai-Sarawandori-1024x768.jpg" alt="Pantai Pulau Kakara" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+var marker = L.marker([-0.9649192,135.4406849]).addTo(map);
+marker.bindPopup(`
+    <div style="text-align: center;">
+    <b> Pantai Bosnik </b>
+    <br>R6HF+M87, Woniki, Kec. Biak Tim., Kabupaten Biak Numfor, Papua 98152<br>
+    <img src="https://ksmtour.com/media/images/articles8/pantai-bosnik-papua.jpg" alt="Pantai Pulau Kakara" style="width: 50%; height: auto; margin-top: 5px;">
+    </div>
+`);
+
+
+
+// Membuat ikon kustom
+var fishIcon = L.icon({
+    iconUrl: 'https://freesvg.org/img/1515018392.png', // URL gambar ikon
+    iconSize: [32, 32],             // Ukuran ikon [lebar, tinggi]
+    iconAnchor: [16, 16],           // Titik jangkar ikon (pusat di tengah)
+    popupAnchor: [0, -16]           // Posisi popup relatif terhadap ikon
+});
+
+// Menggunakan ikon kustom pada marker
+var marker = L.marker([0.3735494,127.4240247], { icon: fishIcon }).addTo(map);
+
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b>Cirrihitichthys</b><br>
+        Species Cirrihitichthys oxycephalus<br>
+        <img src="https://images.reeflifesurvey.com/0/species_c2_570db690d15ec.w1300.h866.JPG" alt="Cirrihitichthys" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+var marker = L.marker([0.3688554, 127.4274777], { icon: fishIcon }).addTo(map);
+
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b>Amphiprion</b><br>
+        Species Amphiprion ocellaris <br>
+        <img src="https://1.bp.blogspot.com/_4-zkKRYevNo/S6-kdnHNW6I/AAAAAAAAABE/90PbxRylQ3w/s1600/Amphiprion+ocellaris+(h).jpg" alt="Amphiprion" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`); 
+
+var marker = L.marker([0.385987,127.3826671], { icon: fishIcon }).addTo(map);
+
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b>Ablyglyphidodon</b><br>
+        Species Ablyglyphidodon aureus <br>
+        <img src="https://www.fishbase.se/images/thumbnails/jpg/tn_Amaur_uc.jpg" alt="Amphiprion" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([0.385995,127.3783141], { icon: fishIcon }).addTo(map);
+
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b>Ablyglyphidodon</b><br>
+        Species Amblyglyphidodon curacao <br>
+        <img src="https://up.yimg.com/ib/th?id=OIP.gPZ0ROQWk8GjWdlITNo9zQHaE7&pid=Api&rs=1&c=1&qlt=95&w=152&h=101" alt="Amphiprion" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([0.351982,127.3526301], { icon: fishIcon }).addTo(map);
+
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b>Amphiprion</b><br>
+        Species Amphiprion perideraion<br>
+        <img src="https://images.reeflifesurvey.com/0/species_b0_57c150e594c88.w1300.h866.jpg" alt="Amphiprion" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([0.350115,127.3510961], { icon: fishIcon }).addTo(map);
+
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b>Amphiprion</b><br>
+        Species Amphiprion  clarkii<br>
+        <img src="https://images.reeflifesurvey.com/0/species_b0_57c150e594c88.w1300.h866.jpg" alt="Amphiprion" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([0.34394,127.3465211], { icon: fishIcon }).addTo(map);
+
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b>Abudefduf</b><br>
+        Species Abudefduf sexfasciatus<br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Abudefduf_sexfasciatus_R%C3%A9union.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([0.341451, 127.3466065], { icon: fishIcon }).addTo(map);
+
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b>Chromis</b><br>
+        Species Chromis viridis<br>
+        <img src="https://fishesofaustralia.net.au/images/image/ChromisViridisMarkRosenstein.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([0.367795,127.3663681], { icon: fishIcon }).addTo(map);
+
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b>Chromis</b><br>
+        Species Chromis ternatensis<br>
+        <img src="https://images.reeflifesurvey.com/0/species_db_56e77a4c141fd.w1300.h866.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([0.303032,127.4358641], { icon: fishIcon }).addTo(map);
+
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b>Dascyllus</b><br>
+        Species Dascyllus trimaculatus<br>
+        <img src="https://fishesofaustralia.net.au/Images/Image/AdultDascyllusTrimaculatusErikSchlogl.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([0.296281,127.4300291], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b>Pomacentrus</b><br>
+        Species Pomacentrus coelestis<br>
+        <img src="https://images.reeflifesurvey.com/0/species_d8_570c589346012.w1300.h866.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([0.2670184,127.3917967], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b>Zebrasoma</b><br>
+        Species Zebrasoma scopas<br>
+        <img src="https://images.reeflifesurvey.com/0/species_fa_57d8c36495841.w1300.h866.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([0.2853354, 127.3594447], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b>Pterocaesio </b><br>
+        Species Pterocaesio tile<br>
+        <img src="https://images.reeflifesurvey.com/0/species_07_573ab38a20444.w1300.h866.JPG" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([0.2849484,127.3386617], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Halichoeres </b><br>
+        Species Halichoeres melanurus<br>
+        <img src="https://images.reeflifesurvey.com/0/species_6a_574b92057073b.w1000.h666.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+
+var marker = L.marker([-2.5136056,140.7467854], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Acanthuridae </b><br>
+        Species Ctenochaetus cyanocheilus <br>
+        <img src="https://images.reeflifesurvey.com/0/species_27_57551fc58382a.w1000.h666.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-2.5094916,140.7452537], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Acanthuridae </b><br>
+        Species Ctenochaetus binotatus <br>
+        <img src="http://fishesofaustralia.net.au/Images/Image/CtenochaetBinotatzsispeo.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-2.5020096,140.7353247], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Acanthuridae </b><br>
+        Species Ctenochaetus striatus <br>
+        <img src="https://fishesofaustralia.net.au/images/image/CtenochaetStriat2MarkRosenstein.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-2.4947386,140.7373837], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Acanthuridae </b><br>
+        Species Acanthurus nigrofuscus <br>
+        <img src="https://images.reeflifesurvey.com/0/species_ca_57d8a7a54fa59.w1300.h866.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-2.487485,140.7311534], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Acanthuridae </b><br>
+        Species Acanthurus lineatus <br>
+        <img src="http://fishesofaustralia.net.au/images/image/AcanthLineatAndyLewis.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-2.4898631,140.7342634], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Acanthuridae </b><br>
+        Species Acanthurus thompsoni <br>
+        <img src="https://shrimplovers.com.au/upload/modules/cart/product/originals/1428/thompson-s-tang-shrimplovers.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-2.4657826, 140.7170257], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Acanthuridae </b><br>
+        Species Acanthurus leucosternon <br>
+        <img src="https://www.fishipedia.es/wp-content/uploads/2018/10/Acanthurus-leucosternon-Reunion-Island-1.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-2.5827696,140.7229104], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Acanthuridae </b><br>
+        Species Ctenochaetus cyanocheilus <br>
+        <img src="https://images.reeflifesurvey.com/0/species_27_57551fc58382a.w1000.h666.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+var marker = L.marker([-2.5794471,140.7217043], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Acanthuridae </b><br>
+        Species Ctenochaetus binotatus <br>
+        <img src="http://fishesofaustralia.net.au/Images/Image/CtenochaetBinotatzsispeo.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-2.5817538,140.7146946], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Acanthuridae </b><br>
+        Species Zebrasoma scopas <br>
+        <img src="https://fishesofaustralia.net.au/images/image/CtenochaetStriat2MarkRosenstein.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+var marker = L.marker([-2.5586956,140.7307144], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Acanthuridae </b><br>
+        Species Ctenochaetus striatus <br>
+        <img src="https://fishesofaustralia.net.au/images/image/CtenochaetStriat2MarkRosenstein.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+var marker = L.marker([-2.6144546,140.7656727], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Acanthuridae </b><br>
+        Species Acanthurus maculiceps <br>
+        <img src="https://www.monaconatureencyclopedia.com/wp-content/uploads/2013/06/jpg_Caratteristiche_inconfondibili_sono_le_macchie_sul_capo_e_la_banda_bianca_sul_peduncolo_caudale_c_Giuseppe_Mazza.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+var marker = L.marker([-2.5459676,140.7339287], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Acanthuridae </b><br>
+        Species Ctenochaetus cyanocheilus <br>
+        <img src="https://images.reeflifesurvey.com/0/species_27_57551fc58382a.w1000.h666.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+var marker = L.marker([-2.5393716,140.7209104], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Acanthuridae </b><br>
+        Species Ctenochaetus binotatus <br>
+        <img src="http://fishesofaustralia.net.au/Images/Image/CtenochaetBinotatzsispeo.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-2.5391046,140.7115914], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Acanthuridae </b><br>
+        Species Ctenochaetus striatus <br>
+        <img src="https://fishesofaustralia.net.au/images/image/CtenochaetStriat2MarkRosenstein.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-2.5477874,140.722839], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Acanthuridae </b><br>
+        Species Ctenochaetus cyanocheilus <br>
+        <img src="https://images.reeflifesurvey.com/0/species_27_57551fc58382a.w1000.h666.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+var marker = L.marker([-2.5462866,140.7252847], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Acanthuridae </b><br>
+        Species Ctenochaetus binotatus <br>
+        <img src="http://fishesofaustralia.net.au/Images/Image/CtenochaetBinotatzsispeo.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-2.5473696,140.7211757], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Acanthuridae </b><br>
+        Species Ctenochaetus striatus <br>
+        <img src="https://fishesofaustralia.net.au/images/image/CtenochaetStriat2MarkRosenstein.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-2.6183926,140.7065324], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Acanthuridae </b><br>
+        Species Ctenochaetus cyanocheilus <br>
+        <img src="https://images.reeflifesurvey.com/0/species_27_57551fc58382a.w1000.h666.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+var marker = L.marker([-2.6118116,140.6974524], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Acanthuridae </b><br>
+        Species Ctenochaetus binotatus <br>
+        <img src="http://fishesofaustralia.net.au/Images/Image/CtenochaetBinotatzsispeo.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([-2.6144806,140.6886674], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Acanthuridae </b><br>
+        Species Ctenochaetus striatus <br>
+        <img src="https://fishesofaustralia.net.au/images/image/CtenochaetStriat2MarkRosenstein.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([0.8000019,128.3081287], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Chlorurus </b><br>
+        Species Scarus bleekeri <br>
+        <img src="https://housaqua.com/uploads/posts/2015-08/1439919058_chlorurus-bleekeri.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+var marker = L.marker([0.88239,128.4337201], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Plectorinchus </b><br>
+        Species Plectorinchus flavomaculatus <br>
+        <img src="https://images.reeflifesurvey.com/0/species_bf_574e7b6b819c0.w1000.h666.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+var marker = L.marker([0.752332,128.4202221], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Plectorinchus </b><br>
+        Species Plectorinchus flavomaculatus <br>
+        <img src="https://images.reeflifesurvey.com/0/species_a9_57282acc00ceb.w1300.h866.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+var marker = L.marker([0.677007,128.4692491], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Plectorinchus </b><br>
+        Species Plectropomus laevis <br>
+        <img src="https://images.reeflifesurvey.com/0/species_c6_57282f1fbda5c.w1300.h866.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+var marker = L.marker([0.835106,128.5092011], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Craterognathus </b><br>
+        Species Carangoides plagiotaenia  <br>
+        <img src="https://images.reeflifesurvey.com/0/species_d0_573513fa58af3.w1000.h666.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+var marker = L.marker([0.835546,128.5117121], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Plectorhincus </b><br>
+        Species Plectorhinchus chaetodonoides <br>
+        <img src="https://media.australian.museum/media/dd/images/Spotted_Sweetlips_Plectorhinchus_chaetodonoid.width-1600.bd052fe.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([0.835546,128.5117121], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Caranx </b><br>
+        Species Caranx melampygus  <br>
+        <img src="https://images.reeflifesurvey.com/0/species_31_5a1b88b755d83.w1000.h666.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+var marker = L.marker([1.589209,128.7208831], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Chlorurus </b><br>
+        Species Scarus bleekeri <br>
+        <img src="https://housaqua.com/uploads/posts/2015-08/1439919058_chlorurus-bleekeri.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+var marker = L.marker([1.588537,128.7157711], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Plectorinchus </b><br>
+        Species Plectorinchus flavomaculatus <br>
+        <img src="https://images.reeflifesurvey.com/0/species_bf_574e7b6b819c0.w1000.h666.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+var marker = L.marker([1.589727,128.7119731], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Plectorinchus </b><br>
+        Species Plectorinchus flavomaculatus <br>
+        <img src="https://images.reeflifesurvey.com/0/species_a9_57282acc00ceb.w1300.h866.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+var marker = L.marker([1.569147,128.7488691], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Plectorinchus </b><br>
+        Species Plectropomus laevis <br>
+        <img src="https://images.reeflifesurvey.com/0/species_c6_57282f1fbda5c.w1300.h866.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+var marker = L.marker([1.569168,128.7463911], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Craterognathus </b><br>
+        Species Carangoides plagiotaenia  <br>
+        <img src="https://images.reeflifesurvey.com/0/species_d0_573513fa58af3.w1000.h666.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+var marker = L.marker([1.568331,128.7430331], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Plectorhincus </b><br>
+        Species Plectorhinchus chaetodonoides <br>
+        <img src="https://media.australian.museum/media/dd/images/Spotted_Sweetlips_Plectorhinchus_chaetodonoid.width-1600.bd052fe.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+var marker = L.marker([1.570176,128.7392031], { icon: fishIcon }).addTo(map);
+// Menambahkan popup
+marker.bindPopup(`
+    <div style="text-align: center;">
+        <b> Caranx </b><br>
+        Species Caranx melampygus  <br>
+        <img src="https://images.reeflifesurvey.com/0/species_31_5a1b88b755d83.w1000.h666.jpg" alt="Abudefduf" style="width: 200px; height: auto; margin-top: 5px; border-radius: 5px;">
+    </div>
+`);
+
+
+ </Script>
+    
+</html>
